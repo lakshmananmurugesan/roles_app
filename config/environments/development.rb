@@ -40,11 +40,11 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
   config.paperclip_defaults = {
   storage: :s3,
-  s3_region: ENV['AWS_REGION'],
+  s3_region: 'us-east-1',
   s3_credentials: {
-    bucket: ENV["bucket"],
-    access_key_id: ENV["access_key_id"],
-    secret_access_key: ENV["secret_access_key"]
+    bucket: 'collegedaa',
+    access_key_id: 'AKIAIUZ6S5ECAEXKYPTA',
+    secret_access_key: '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'
   }
 }
 end

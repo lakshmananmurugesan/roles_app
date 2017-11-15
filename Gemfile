@@ -11,6 +11,10 @@ gem 'cocoon', '~> 1.2.6'
 gem 'paperclip', '~> 5.1'
 gem 'aws-sdk', '~> 2.3'
 
+gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
+gem 'will_paginate'
+gem "jquery-ui-rails", "~> 5.0"
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
