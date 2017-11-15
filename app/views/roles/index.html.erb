@@ -1,9 +1,5 @@
 <h3>Roles List</h3>
-<%= link_to 'New role', new_role_path %>
-<br/>
-<%= link_to 'New User', new_user_path %>
-<br/>
-<table border="1">
+<table border="2px" class="table">
   <tr>
     <th>Name</th>
     <th>Visibility</th>
@@ -13,9 +9,9 @@
   <% @roles.each do |role| %>
     <tr>
       <td><%= role.name %></td>
-      <td><%= role.visibility %></td>
+      <td><%= role.visibility? ? "Yes" : "No" %></td>
       <td><%= link_to 'Show', role_path(role) %></td>
-      <td><%= link_to 'Edit', edit_role_path(role) %></td>
+      <td><%= link_to 'Hide Role', edit_role_path(role), class: "btn btn-success btn-xs" %></td>
       <td><%= link_to 'Destroy', role_path(role),
               method: :delete,
               data: { confirm: 'Are you sure?' } %></td>

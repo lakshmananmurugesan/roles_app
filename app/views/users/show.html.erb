@@ -23,7 +23,6 @@
 <p>
   <strong>Meta details:</strong><br/>
   <% @user.user_metum.each do |meta| %>
-  <%= meta.meta_key %> | <%= meta.meta_value %><br/>
+  Label: <%= meta.meta_key %> | Value: <%= meta.meta_value %><br/>
   <% end %>
 </p>
-<%= link_to 'Back', users_path %>

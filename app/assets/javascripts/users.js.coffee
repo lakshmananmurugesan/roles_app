@@ -1,4 +1,4 @@
-jQuery ->
+$(document).on 'turbolinks:load', ->
   $('#users').dataTable
     sPaginationType: "numbers"
     columnDefs: [
