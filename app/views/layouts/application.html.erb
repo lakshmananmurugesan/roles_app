@@ -6,9 +6,17 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="container">
+
+<header>
+  <h3 style="text-align: center;">Roles App</h3>
+</header>
 
 <%= yield %>
+
+<footer>
+  <span style="float: right;"> Copyright 2017.</span>
+</footer>
 
 </body>
 </html>

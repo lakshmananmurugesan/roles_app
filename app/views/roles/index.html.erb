@@ -1,1 +1,21 @@
-index.html.erb
+<h3>Roles List</h3>
+<%= link_to 'New role', new_role_path %>
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>Visibility</th>
+    <th colspan="3">Actions</th>
+  </tr>
+ 
+  <% @roles.each do |role| %>
+    <tr>
+      <td><%= role.name %></td>
+      <td><%= role.visibility %></td>
+      <td><%= link_to 'Show', role_path(role) %></td>
+      <td><%= link_to 'Edit', edit_role_path(role) %></td>
+      <td><%= link_to 'Destroy', role_path(role),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>

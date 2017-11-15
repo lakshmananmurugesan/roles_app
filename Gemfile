@@ -5,6 +5,10 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.7'
 
 gem 'pg'
+gem 'bootstrap-sass'
+gem 'simple_form', '~> 3.0.2'
+gem 'cocoon', '~> 1.2.6'
+gem 'paperclip', '~> 5.1'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'

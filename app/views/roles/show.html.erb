@@ -1,0 +1,9 @@
+<p>
+  <strong>Name:</strong>
+  <%= @role.name %>
+</p>
+<p>
+  <strong>Visibility:</strong>
+  <%= @role.visibility? ? "Yes" : "No" %>
+</p>
+<%= link_to 'Back', roles_path %>
