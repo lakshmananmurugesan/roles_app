@@ -1,0 +1,9 @@
+<div class="row nested-fields">
+  <div class='col-md-6 form-group'>
+    <%= f.text_field :meta_key, placeholder: "Type label", class: "form-control validate[required]" %>
+    <%= f.text_field :meta_value, placeholder: "Type meta value", class: "form-control validate[required]" %>
+  </div>
+  <div class='col-md-12 form-group'>
+    <%= link_to_remove_association "Remove Meta Detail", f, class: "btn btn-default form-button" %>
+  </div>
+</div>

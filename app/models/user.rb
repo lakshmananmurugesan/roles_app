@@ -11,4 +11,6 @@ class User < ActiveRecord::Base
   validates_attachment_content_type :profile_pic, :content_type => ['image/jpeg', 'image/png']
 
   belongs_to :role
+  has_many :user_metum, dependent: :destroy
+  accepts_nested_attributes_for :user_metum, reject_if: :all_blank, allow_destroy: true
 end

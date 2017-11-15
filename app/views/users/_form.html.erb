@@ -39,6 +39,14 @@
     <%= form.file_field :profile_pic %>
   </p>
 
+  <h3>Meta Details</h3>
+  <%= form.simple_fields_for :user_metum do |user_metum| %>
+    <%= render 'user_metum_fields', f: user_metum %>
+  <% end %>
+  <div class="links">&nbsp;
+    <%= link_to_add_association 'Add Meta Detail', form, :user_metum, class: "btn btn-default add-button" %>
+  </div><br/>
+
   <p>
     <%= form.submit %>
   </p>

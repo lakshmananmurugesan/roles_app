@@ -19,4 +19,11 @@
   <strong>Pic:</strong>
   <%= image_tag @user.profile_pic.url(:thumb) %>
 </p>
+
+<p>
+  <strong>Meta details:</strong><br/>
+  <% @user.user_metum.each do |meta| %>
+  <%= meta.meta_key %> | <%= meta.meta_value %><br/>
+  <% end %>
+</p>
 <%= link_to 'Back', users_path %>
