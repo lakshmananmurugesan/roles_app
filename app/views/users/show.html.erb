@@ -12,6 +12,11 @@
 </p>
 <p>
   <strong>Role:</strong>
-  <%= @user.role.name %>
+  <%= @user.try(:role).try(:name) %>
+</p>
+
+<p>
+  <strong>Pic:</strong>
+  <%= image_tag @user.profile_pic.url(:thumb) %>
 </p>
 <%= link_to 'Back', users_path %>
