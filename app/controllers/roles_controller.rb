@@ -12,7 +12,8 @@ class RolesController < ApplicationController
   def create
     @role = Role.new(role_params)
     if @role.save
-      redirect_to @role, :notice => "Successfully created a role"
+      flash[:success] = "Successfully created a role"
+      redirect_to @role
     else
       render 'new'
     end
@@ -22,7 +23,6 @@ class RolesController < ApplicationController
   end
 
   def update
-    @role = Role.find(params[:id])
     if @role.update(role_params)
       redirect_to @role
     else

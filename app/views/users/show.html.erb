@@ -1,0 +1,17 @@
+<p>
+  <strong>First Name:</strong>
+  <%= @user.first_name %>
+</p>
+<p>
+  <strong>Last Name:</strong>
+  <%= @user.last_name %>
+</p>
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+<p>
+  <strong>Role:</strong>
+  <%= @user.role.name %>
+</p>
+<%= link_to 'Back', users_path %>

@@ -6,11 +6,15 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body class="container">
+<body class="container" style="background:#D3D3D3">
 
 <header>
-  <h3 style="text-align: center;">Roles App</h3>
+  <%= link_to "<h3 style='text-align: center;''>Roles App</h3>".html_safe, roles_path %>
 </header>
+
+<% flash.each do |key, value| %>
+  <div class="alert alert-<%= key %>"><%= value %></div>
+<% end %>
 
 <%= yield %>
 
